@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(CALC)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 17)
 set(src_list add.c div.c main.c mult.c sub.c)
 add_executable(app ${src_list} head.h)
-
