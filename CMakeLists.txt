@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 
+message(STATUS "build project CALC")
 project(CALC)
+
+message(STATUS "source path: ${PROJECT_SOURCE_DIR}")
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
@@ -18,3 +21,5 @@ file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
 link_directories(${PROJECT_SOURCE_DIR}/lib) # must befor add_executable
 add_executable(app_shared main.c)
 target_link_libraries(app_shared calc_shared)
+
+message(WARNING "cmkae finish")
